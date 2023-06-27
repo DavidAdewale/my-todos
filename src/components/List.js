@@ -26,6 +26,7 @@ export default function List({ tasks, onComplete, onDelete, onClearTasks }) {
               <div>
                 {todo.description}
                 <span onClick={() => onComplete(todo.id)}>
+                  {/* {todo.completed ? '🔁' : '✔'} */}
                   <svg className="list__icon">
                     <use
                       xlinkHref={`/sprite.svg#icon-${
@@ -36,6 +37,7 @@ export default function List({ tasks, onComplete, onDelete, onClearTasks }) {
                 </span>
 
                 <span onClick={() => onDelete(todo.id)}>
+                  {/* ❌ */}
                   <svg className="list__icon list__icon--red">
                     <use xlinkHref="/sprite.svg#icon-x"></use>
                   </svg>
